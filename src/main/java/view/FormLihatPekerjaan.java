@@ -143,7 +143,7 @@ public class FormLihatPekerjaan extends javax.swing.JDialog {
     }
     
     public String getKodePekerjaanDipilih(){
-        return kodePekerjaanDipilih;
+        return kodePekerjaanDipilih == null ? "" : kodePekerjaanDipilih;
     }
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
