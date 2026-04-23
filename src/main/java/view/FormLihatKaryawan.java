@@ -148,8 +148,8 @@ public class FormLihatKaryawan extends javax.swing.JDialog {
         }
     }
     
-    public String getKodePekerjaanDipilih(){
-        return ktpDipilih;
+    public String getKtpDipilih(){
+        return ktpDipilih == null ? "" : ktpDipilih;
     }
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -219,7 +219,5 @@ public class FormLihatKaryawan extends javax.swing.JDialog {
     private javax.swing.JTable karyawanTable;
     // End of variables declaration//GEN-END:variables
 
-    public Object getKtpDipilih() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    // Method getKtpDipilih dihapus karena sudah ada di atas
 }
