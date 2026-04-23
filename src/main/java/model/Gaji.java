@@ -51,13 +51,19 @@ public class Gaji {
                     preparedStatement = connection.prepareStatement(SQLStatemen);
                     preparedStatement.setString(1, ktp);
                     for (int i=0; i<4; i++){
-                        preparedStatement.setString(2+i, recGaji[i].toString());
+                        String val = recGaji[i] != null ? recGaji[i].toString().trim() : "0";
+                        if (val.isEmpty()) val = "0"; // Mencegah error jika inputan kosong
+                        preparedStatement.setString(2+i, val);
                     }
                     jumlahSimpan += preparedStatement.executeUpdate();
-                } catch (SQLException ex){}
+                } catch (SQLException ex){
+                    adaKesalahan = true;
+                    pesan = "Gagal menyimpan detail gaji: " + ex.getMessage();
+                }
             }
-            if (jumlahSimpan>0) {
-                adaKesalahan = false;
+            if (listGaji.length > 0 && jumlahSimpan == 0) {
+                adaKesalahan = true;
+                if (pesan == null) pesan = "Tidak ada data yang berhasil disimpan.";
             }
         } else {
             adaKesalahan = true;

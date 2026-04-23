@@ -124,6 +124,9 @@ public class GajiController {
     }
 
     public void simpan (javax.swing.JTextField ktp, javax.swing.JTable gajiTable){
+        if (gajiTable.isEditing()){
+            gajiTable.getCellEditor().stopCellEditing();
+        }
         if (!ktp.getText().equals("")){
             gaji.setKtp(ktp.getText());
             java.util.ArrayList<Object[]> validList = new java.util.ArrayList<>();
