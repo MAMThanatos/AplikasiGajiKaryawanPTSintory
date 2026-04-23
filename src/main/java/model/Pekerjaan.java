@@ -116,7 +116,7 @@ public class Pekerjaan {
             ResultSet rset;
             try {
                 SQLStatemen = "select kodepekerjaan, namapekerjaan from tbpekerjaan";
-                sta = connection.createStatement();
+                sta = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
                 rset = sta.executeQuery(SQLStatemen);
                 rset.last();
                 list = new Object[rset.getRow()][2];
