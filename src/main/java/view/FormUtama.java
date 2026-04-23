@@ -85,7 +85,7 @@ public class FormUtama extends javax.swing.JFrame {
         aplikasiMenu.add(jSeparator3);
         aplikasiMenu.add(jSeparator4);
 
-        keluarMenuItem.setText("Logout");
+        keluarMenuItem.setText("Keluar");
         keluarMenuItem.addActionListener(this::keluarMenuItemActionPerformed);
         aplikasiMenu.add(keluarMenuItem);
 

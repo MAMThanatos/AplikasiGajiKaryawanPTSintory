@@ -188,7 +188,7 @@ public String getNamaPekerjaan(){
 }
 
 public void setJumlahTugas(int jumlahTugas){
-    jumlahTugasComboBox.setSelectedItem(jumlahTugas);
+    jumlahTugasComboBox.setSelectedItem(Integer.toString(jumlahTugas));
 }
 
 public int getJumlahTugas(){
@@ -202,8 +202,9 @@ public int getJumlahTugas(){
 
     private void kodePekerjaanTextFieldKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_kodePekerjaanTextFieldKeyPressed
         // TODO add your handling code here:
-        pekerjaanController.simpan (kodePekerjaanTextField, 
-                namaPekerjaanTextField, jumlahTugasComboBox);
+        if (evt.getKeyCode() == java.awt.event.KeyEvent.VK_ENTER) {
+            pekerjaanController.cari(kodePekerjaanTextField);
+        }
     }//GEN-LAST:event_kodePekerjaanTextFieldKeyPressed
 
     private void lihatButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lihatButtonActionPerformed
