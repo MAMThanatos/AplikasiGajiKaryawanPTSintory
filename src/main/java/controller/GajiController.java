@@ -126,13 +126,19 @@ public class GajiController {
     public void simpan (javax.swing.JTextField ktp, javax.swing.JTable gajiTable){
         if (!ktp.getText().equals("")){
             gaji.setKtp(ktp.getText());
-            Object[][] listGaji = new Object[gajiTable.getRowCount()][4];
+            java.util.ArrayList<Object[]> validList = new java.util.ArrayList<>();
             for (int i=0; i <gajiTable.getRowCount();i++){
-                listGaji[i][0] = gajiTable.getValueAt(i, 0);
-                listGaji[i][1] = gajiTable.getValueAt(i, 2);
-                listGaji[i][2] = gajiTable.getValueAt(i, 3);
-                listGaji[i][3] = gajiTable.getValueAt(i, 4);
+                Object kodePekerjaan = gajiTable.getValueAt(i, 0);
+                if (kodePekerjaan != null && !kodePekerjaan.toString().trim().isEmpty()) {
+                    Object[] row = new Object[4];
+                    row[0] = kodePekerjaan;
+                    row[1] = gajiTable.getValueAt(i, 2) != null ? gajiTable.getValueAt(i, 2) : "0";
+                    row[2] = gajiTable.getValueAt(i, 3) != null ? gajiTable.getValueAt(i, 3) : "0";
+                    row[3] = gajiTable.getValueAt(i, 4) != null ? gajiTable.getValueAt(i, 4) : "0";
+                    validList.add(row);
+                }
             }
+            Object[][] listGaji = validList.toArray(new Object[0][]);
             gaji.setListGaji(listGaji);
             if (gaji.simpan()){
                 FormUtama.formGaji.setKtp("");

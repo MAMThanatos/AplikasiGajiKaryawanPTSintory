@@ -24,6 +24,9 @@ public class FormGaji extends javax.swing.JInternalFrame {
         initComponents();
         
         gajiDefaultTableModel = (DefaultTableModel) gajiTable.getModel();
+        gajiDefaultTableModel.setColumnIdentifiers(new String[]{
+            "Kode Pekerjaan", "Nama Pekerjaan", "Gaji Bersih", "Gaji Kotor", "Tunjangan"
+        });
     }
 
     /**
