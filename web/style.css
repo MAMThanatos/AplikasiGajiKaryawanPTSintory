@@ -1,0 +1,413 @@
+/* =======================================================
+   Customized CSS Stylesheet for Aplikasi Gaji Karyawan PT MAM
+   Matches exactly the colors, layout, and fonts of the final image.
+   ======================================================= */
+
+/* Body Background */
+body {
+    background-color: #999999;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 20px 0;
+}
+
+#art-main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main Grey Sheet Container */
+.art-sheet {
+    width: 1000px;
+    background-color: #e8e8e8;
+    border: 1px solid #777777;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Text Styles */
+.art-header {
+    background-color: #e8e8e8;
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid #cccccc;
+}
+
+#art-header-jpeg {
+    font-family: 'Times New Roman', Times, serif;
+    color: #000000;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+/* Center Horizontal Pill Navigation Bar (nav) */
+nav {
+    display: inline-block;
+    background: #efefef;
+    background: linear-gradient(to bottom, #ffffff 0%, #bbbbbb 100%);
+    background: -moz-linear-gradient(top, #ffffff 0%, #bbbbbb 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%, #bbbbbb 100%);
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.15);
+    padding: 0 10px;
+    border-radius: 12px;
+    margin: 0 auto 30px auto;
+    list-style: none;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul:after {
+    content: ""; 
+    clear: both; 
+    display: block;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+}
+
+nav ul li:hover {
+    background: #dfdfdf;
+    background: linear-gradient(to bottom, #efefef 0%, #bbbbbb 40%);
+    background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 40%);
+    background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 40%);
+}
+
+nav ul li:hover a {
+    color: #000000;
+}
+
+nav ul li a {
+    display: block; 
+    padding: 8px 16px;
+    color: #757575; 
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+/* Horizontal Submenu Dropdowns */
+nav ul ul {
+    display: none;
+    background: #efefef; 
+    border-radius: 0px; 
+    padding: 0;
+    position: absolute; 
+    top: 100%;
+    left: 0;
+    width: 150px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.15);
+    z-index: 999;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    float: none;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #bbbbbb;
+    position: relative;
+}
+
+nav ul ul li a {
+    padding: 8px 12px;
+    color: #757575;
+}
+
+nav ul ul li a:hover {
+    background: #dfdfdf;
+}
+
+nav ul ul ul {
+    position: absolute; 
+    left: 100%; 
+    top: 0;
+}
+
+/* Layout Columns */
+.art-content-layout {
+    display: flex;
+    flex-direction: row;
+    background-color: #e8e8e8;
+}
+
+/* Sidebar Wrapper */
+.art-sidebar1 {
+    width: 200px;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Place sidebar card nicely aligned to top */
+}
+
+/* Sidebar Menu Card (#menu) */
+#menu {
+    background: #efefef;
+    background: linear-gradient(to bottom, #ffffff 0%, #cccccc 100%);
+    background: -moz-linear-gradient(top, #ffffff 0%, #cccccc 100%);
+    background: -webkit-linear-gradient(top, #ffffff 0%, #cccccc 100%);
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.15);
+    padding: 20px 10px;
+    border-radius: 12px;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    width: 140px;
+    text-align: center;
+    border: 1px solid #b0b0b0;
+    box-sizing: border-box;
+}
+
+#menu h2 {
+    font-size: 13.5px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    font-family: Arial, sans-serif;
+}
+
+#menu h2:first-of-type {
+    margin-top: 5px; /* Tighter margin for first header */
+}
+
+#menu li {
+    list-style: none;
+    margin-bottom: 4px;
+}
+
+/* Menu items with green left/right borders and lavender background */
+#menu a:link, #menu a:visited {
+    display: block;
+    padding: 6px 4px;
+    border-left: 6px solid #579e2f; /* Solid Green vertical bar on left */
+    border-right: 6px solid #579e2f; /* Solid Green vertical bar on right */
+    background-color: #cbd1f1; /* Light Lavender Background */
+    color: #551a8b; /* HTML visited link purple color */
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 5px auto;
+    width: 90px;
+    box-sizing: border-box;
+}
+
+/* Hover Menu Style */
+#menu a:hover {
+    background-color: #89fd69; /* Bright Lime Green Hover background */
+    color: #ffffff; /* White hover text */
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+/* White Content Area */
+.art-content {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align nav and post */
+}
+
+/* Centered "SelamatDatang" Title */
+.art-post {
+    display: block !important;
+    width: 100%;
+    flex: 1;
+    padding: 10px 0;
+    box-sizing: border-box;
+}
+
+.art-post h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 38px;
+    color: #000000;
+    margin: 60px 0;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Footer Section */
+.art-footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    border-top: 1px solid #cccccc;
+}
+
+/* =======================================================
+   CRUD Container and Forms Styling
+   ======================================================= */
+.crud-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.crud-form-section {
+    width: 100%;
+    max-width: 450px; /* Centered form container width */
+    margin: 0 auto 30px auto;
+    text-align: center;
+}
+
+.crud-form-section h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.form-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.form-table td {
+    padding: 6px 8px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.form-table input[type="text"],
+.form-table input[type="password"],
+.form-table select {
+    width: 180px;
+    padding: 6px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}
+
+.form-table select {
+    width: 80px; /* narrower for select option */
+}
+
+/* Submit buttons styled like menu buttons */
+.form-table input[type="submit"],
+.btn-submit {
+    padding: 6px 14px;
+    background-color: #cbd1f1; /* Light Lavender */
+    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #551a8b;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.form-table input[type="submit"]:hover,
+.btn-submit:hover {
+    background-color: #89fd69; /* Bright Lime Green */
+    color: #ffffff;
+}
+
+/* Inline buttons */
+.form-table input[type="submit"].btn-inline {
+    margin-left: 5px;
+    padding: 4px 10px;
+    font-size: 11px;
+    width: auto;
+}
+
+/* Modern Data Table Below Form */
+.crud-table-section {
+    width: 100%;
+    margin-top: 10px;
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    border: 1px solid #cccccc;
+}
+
+.data-table th {
+    background-color: #cccccc;
+    color: #000000;
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid #aaaaaa;
+    text-align: center;
+}
+
+.data-table td {
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    text-align: left;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.data-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.hash-cell {
+    word-break: break-all;
+    font-family: monospace;
+    font-size: 11px;
+    max-width: 150px;
+}
+
+/* Centered Login Card Container */
+.login-container {
+    width: 100%;
+    max-width: 340px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #efefef;
+    background: linear-gradient(to bottom, #ffffff 0%, #cccccc 100%);
+    border: 1px solid #b0b0b0;
+    border-radius: 12px;
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.15);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.login-container h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
